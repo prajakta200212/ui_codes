@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
+        background-color: #222;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+      ul li {
+        position: relative;
+      }
+      ul li a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+        padding: 5px;
+      }
+      ul li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0%;
+        height: 3px;
+        background-color: #ff5722;
+        transition: width 0.3s ease-in-out;
+      }
+      ul li a:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="">Products</a></li>
+      <li><a href="">Contacts</a></li>
+    </ul>
+  </body>
+</html>

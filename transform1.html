@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #222;
+      }
+      .btn {
+        position: relative;
+        display: inline-block;
+        padding: 12px, 40px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        border: 2px solid crimson;
+        background: transparent;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: color 0.3s;
+        z-index: -1;
+      }
+      .btn::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        background-color: crimson;
+        transition: width 0.4s ease-in-out;
+      }
+      .btn:hover::before {
+        width: 100%;
+      }
+      .btn:hover {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Hover Me</button>
+  </body>
+</html>
