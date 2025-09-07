@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: teal;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-name: anni;
+        animation-duration: 8s;
+        /* animation-delay: 2s;*/
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
+      }
+      /*.box:hover {
+        animation-name: anni;
+        animation-duration: 4s;
+      }*/
+      /*@keyframes anni {
+        from {
+          background-color: black;
+          transform: rotate(0deg);
+          border-radius: 0%;
+        }
+        to {
+          background-color: green;
+          transform: rotate(360deg);
+          border-radius: 20%;
+        }
+      }*/
+      @keyframes anni {
+        0% {
+          background-color: black;
+          transform: rotate(0deg);
+          border-radius: 0%;
+        }
+        25% {
+          background-color: orange;
+          transform: rotate(45deg);
+          border-radius: 10%;
+        }
+        50% {
+          background-color: purple;
+          transform: rotate(90deg);
+          border-radius: 30%;
+        }
+        75% {
+          background-color: green;
+          transform: rotate(180deg);
+          border-radius: 40%;
+        }
+        100% {
+          background-color: crimson;
+          transform: rotate(360deg);
+          border-radius: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Box</div>
+  </body>
+</html>
